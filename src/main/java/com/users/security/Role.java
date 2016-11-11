@@ -1,6 +1,6 @@
 package com.users.security;
 
 public enum Role {
-	USER, ADMIN;
+	ROLE_ADMIN, ROLE_USER;
 
 }

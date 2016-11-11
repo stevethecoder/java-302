@@ -27,6 +27,10 @@ public class Contact {
 //	private long userId;
 
 	protected Contact() {}
+	
+	public Contact(long userId){
+		this.userId = userId;
+	}
 
 	public Contact(String firstName, String lastName, String email, String phoneNumber, String password, boolean active, long userId) {
 		this.firstName = firstName;
