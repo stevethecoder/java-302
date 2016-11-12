@@ -28,5 +28,9 @@
 		</tbody>
 	</table>
 	<a href="/contact/create">Create Contact</a>
+	<form th:action="@{|/contact/search|}" method="POST">
+	   <input type="text" placeholder="Search..." name="search" th:value="${search}" />
+	   <input type="submit" th:value="Search"/>
+	</form>
 </body>
 </html>
