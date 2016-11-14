@@ -23,7 +23,7 @@ form {
 </style>
 </head>
 <body layout:fragment="content">
-	<h1>Contact</h1>
+	<h1 style="color:#509b9e;">Edit Contact Information</h1>
 	<form th:action="@{|/contact/${contact.id}/edit|}"
 		enctype="multipart/form-data" method="POST">
 		<input name="id" type="hidden" th:value="${contact.id}" /> <input

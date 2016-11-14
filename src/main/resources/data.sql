@@ -1,4 +1,4 @@
-insert into java302.users (first_name, last_name, password, email, phone_number, active) values ('Zach', 'Smith', 'abc123', 'zsmith@smoothie.com', '1234567890', true);
+insert into java302.users (first_name, last_name, password, email, phone_number, active) values ('Zach', 'Smith', 'abc123', 'zsmith@smoothie.com', '(317) 345-2233', true);
 insert into java302.users (first_name, last_name, password, email, phone_number, active) values ('Julie', 'Williams', 'def456', 'jwilliams@smoothie.com', '1234561234', true);
 insert into java302.users (first_name, last_name, password, email, phone_number, active) values ('Sven', 'Bjergson', 'lol123', 'sbjergson@smoothie.com', '1234564321', true);
 insert into java302.users (first_name, last_name, password, email, phone_number, active) values ('Allison', 'Johns', 'password123', 'ajohns@smoothie.com', '1234565566', true);

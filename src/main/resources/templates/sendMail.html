@@ -9,7 +9,7 @@
     </style>
 </head>
 <body layout:fragment="content">
-	<h1 th:text="${pageTitle}"></h1>
+	<h1 style="color:#509b9e;" th:text="${pageTitle}"></h1>
 	<form th:action="@{|/email/send|}" enctype="multipart/form-data" method="POST">
         <input name="message" type="hidden" th:value="${message}" />
         

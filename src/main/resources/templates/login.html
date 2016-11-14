@@ -5,7 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body layout:fragment="content">
-	<h1>Login</h1>
+	<h1 style="color:#509b9e;">Login</h1>
 	<div th:if="${param.error}">Invalid username and password.</div>
 	<div th:if="${param.logout}">You have been logged out.</div>
 	<form th:action="@{/login}" method="post">
@@ -21,6 +21,6 @@
 			<input type="submit" value="Sign In" />
 		</div>
 	</form>
-	<a href="/register">Register</a>
+	<a href="/register">Create New User</a>
 </body>
 </html>
