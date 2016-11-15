@@ -3,14 +3,8 @@
 <head>
 	<title>User</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" type="text/css" href="login.css" th:href="login.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/welcome.css" th:href="@{/css/welcome.css}" />
 </head>
-<style>
-	body {
-		/* background: url('images/header-bg.jpg') center center no-repeat; */
-		background-color: red;
-	}
-</style>
 <body layout:fragment="content">
 	<h1 style="color:#509b9e;">Login</h1>
 	<div th:if="${param.error}">Invalid username and password.</div>
