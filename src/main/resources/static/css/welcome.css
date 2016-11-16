@@ -1,4 +1,7 @@
 body {
-background: url('../images/welcomeScreen.png') center center no-repeat;
-/* background-color: red; */
+max-width: 100%;
+height: auto;
+background: url('../images/welcomeScreenFinal.png') center center no-repeat;
+background-size: cover;
+background-attachment: fixed;
 }
