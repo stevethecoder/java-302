@@ -3,6 +3,7 @@
 <head>
     <title>User Edit</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../css/standardBack.css" th:href="@{/css/standardBack.css}" />
     
     <style type="text/css">
     	.field {
@@ -21,7 +22,7 @@
     </style>
 </head>
 <body layout:fragment="content">
-	<h1 style="color:#509b9e;">Edit User Information</h1>
+	<h1 style="color:#509b9e;">Edit User Profile</h1>
 	<form th:action="@{|/user/${user.id}/edit|}" enctype="multipart/form-data" method="POST">
 		<input name="id" type="hidden" th:value="${user.id}"/>
 			

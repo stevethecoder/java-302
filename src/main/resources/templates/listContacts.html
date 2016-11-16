@@ -1,12 +1,21 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layouts/basic">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layouts/basic">
 <head>
-    <title>Contacts</title>
-    <meta http-equiv=" Content-Type" content="text/html; charset=UTF-8" />
+<title>Contacts List</title>
+<meta http-equiv=" Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="../css/standardBack.css"
+	th:href="@{/css/standardBack.css}" />
+<style type="text/css">
+.table-hover thead tr:hover th, .table-hover tbody tr:hover td {
+	background-color: #d9e8e9;
+}
+</style>
 </head>
 <body layout:fragment="content">
-	<h1 style="color:#509b9e;">Contacts</h1>
-	<table>
+	<h1 style="color: #509b9e;">Contacts</h1>
+	<table class="table table-hover">
 		<thead>
 			<tr>
 				<th>First Name</th>
@@ -23,14 +32,13 @@
 				<td th:text="${contact.email}"></td>
 				<td th:text="${contact.phoneNumber}"></td>
 				<td><a href="/" th:href="@{|/contact/${contact.id}|}">Profile</a></td>
-				<td><a href="/" th:href="@{|/contact/${contact.id}|}">Share</a></td>
 			</tr>
 		</tbody>
 	</table>
 	<a href="/contact/create">Create Contact</a>
 	<form th:action="@{|/contact/search|}" method="POST">
-	   <input type="text" placeholder="Search..." name="search" th:value="${search}" />
-	   <input type="submit" th:value="Search"/>
+		<input type="text" placeholder="Search..." name="search"
+			th:value="${search}" /> <input type="submit" th:value="Search" />
 	</form>
 </body>
 </html>

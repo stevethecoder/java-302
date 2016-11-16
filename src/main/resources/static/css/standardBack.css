@@ -1,4 +1,7 @@
 body {
+max-width: 100%;
+height: auto;
 background: url('../images/blankBack.png') center center no-repeat;
-/* background-color: red; */
+background-size: cover;
+background-attachment: fixed;
 }
