@@ -148,6 +148,48 @@ public class IndexController {
 		return profile(userId, model);
 	}
 	
+//	@RequestMapping(value = "/user/{userId}/delete", method = RequestMethod.GET)
+//	public String profileDelete(@PathVariable long userId, Model model) {
+//		model.addAttribute("user", userRepo.findOne(userId));
+//		
+//		if(!permissionService.canAccessUser(userId)) {
+//			log.warn("Cannot allow user to delete " + userId);
+//			return "listUsers";
+//		}
+//
+//		List<UserImage> images = userImageRepo.findByUserId(userId);
+//		if (!CollectionUtils.isEmpty(images)) {
+//			model.addAttribute("userImage", images.get(0));
+//		}
+//		return "listUsers";
+//	}
+//
+//	@RequestMapping(value = "/user/{userId}/delete", method = RequestMethod.POST)
+//	public String profileDelete(@ModelAttribute User user,
+//			@PathVariable long userId,
+//			@RequestParam(name = "removeImage", defaultValue = "true") boolean removeImage,
+//			@RequestParam("file") MultipartFile file,
+//			Model model) {
+//
+//		if(!permissionService.canAccessUser(userId)) {
+//			log.warn("Cannot allow user to delete " + userId);
+//			return "listUsers";
+//		}
+//		
+//		log.debug("Deleting user " + user);
+//		userRepo.save(user);
+//		model.addAttribute("message", "User " + user.getEmail() + " deleted.");
+//
+//		if(removeImage) {
+//			imageService.deleteImage(user);
+//		} else {
+//			imageService.saveImage(file, user);
+//		}
+//
+//		
+//		return profile(userId, model);
+//	}
+	
 	@RequestMapping(value = "/user/create", method = RequestMethod.GET)
 	public String createUser(Model model) {
 		model.addAttribute("user", new User());

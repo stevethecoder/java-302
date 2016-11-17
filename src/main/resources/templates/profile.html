@@ -5,14 +5,15 @@
 <head>
 <title>User</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="stylesheet" type="text/css" href="../css/standardBack.css" th:href="@{/css/standardBack.css}" />
+<link rel="stylesheet" type="text/css" href="../css/standardBack.css"
+	th:href="@{/css/standardBack.css}" />
 </head>
 <body layout:fragment="content">
-	<h1 style="color:#509b9e;">User Profile</h1>
+	<h1 style="color: #509b9e;">User Profile</h1>
 	<img id="avatar" src="" th:if="${userImage}"
 		th:src="${userImage.htmlSrc}" alt="Profile Image"
 		title="Profile Image" />
-	<ul style="list-style-type:none" th:object="${user}"> 
+	<ul style="list-style-type: none" th:object="${user}">
 		<li th:text="*{firstName}"></li>
 		<li th:text="*{lastName}"></li>
 		<li th:text="*{email}"></li>
@@ -20,8 +21,8 @@
 		<li th:if="*{! #strings.isEmpty(twitterHandle)}"><a
 			target="_blank" th:href="@{|https://twitter.com/*{twitterHandle}|}"
 			th:text="*{twitterHandle}"></a></li>
-		<li th:if="*{! #strings.isEmpty(facebookUrl)}"><a
-			target="_blank" th:href="@{|https://facebook.com/*{facebookUrl}|}"
+		<li th:if="*{! #strings.isEmpty(facebookUrl)}"><a target="_blank"
+			th:href="@{|https://facebook.com/*{facebookUrl}|}"
 			th:text="*{facebookUrl}"></a></li>
 		<li th:if="${permissions.canAccessUser(user.id)}"><a href="/"
 			th:href="@{|/user/${user.id}/edit|}">Edit</a></li>
